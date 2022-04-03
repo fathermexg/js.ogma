@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scope_JS</title>
+</head>
+<body>
+    <script>
+    var global = "esta es una variable global";
+    document.write(global)
+
+    var globales = function(){
+        var local = "Esta e sun variable local";
+        alert(local);
+        alert(global);
+    globales = " Modificada";
+    alert(globales);
+    }
+globales();
+
+
+
+
+//global - podemos acceder a ellas desde cualquier parte del código
+//locales - variables creadas dentro de una funccion, solo pueden ser accedidas desde su función o una funcion anidada.
+    </script>
+
+</body>
+
+
+

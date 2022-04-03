@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 id = "titulo"> Titulo de nuestro sitio web</h1>
+    <p>1. Lorem ipsum  <b> dolor</b>  sit amerasdasdasdas dfsadfsdfsadfsadfsdafsadfsadfsadfs
+    asdffffffffffffffffffffffasdfsadfsdfsdfsdfsdfsdf   </p>
+        <p id="segundo">2.sdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsfsdfsdfsdfsdfsdfsdvvvvvvvvvvadvadvadvasdvsad            </p>
+
+        <p>3- Loremasdasdasdhaksjdashkdjashdkjashdkajsdhaksjdhaksjdhajkcjhbfvfweuweruihweiruhweruiwheriuwerherqeeeeeeeeeeee          </p>
+<script>
+    var elementosp = document.getElementsByTagName("p");
+    var segundoparrafo = document.getElementById("segundo");
+// 1.
+    var elemento = document.createElement("h2");
+// 2.
+    var contenido = document.createTextNode("Este es nuestro titulo");
+// 3.
+    elemento.appendChild(contenido);
+// 4.
+    elemento.setAttribute("align","center");
+// 5.
+    document.body.appendChild(elemento); 
+
+
+    // 1- crear el elemento
+// 2- crear un nodo de texto
+// 3- añadir el nodo de texto al elemento
+// 4- agregar atributos al elemento
+// 5- agregar el elemento al documento
+</script>
+</body>
+</html>

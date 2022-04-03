@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style type="text/css">textarea {resize: none;} </style>
+</head>
+<body>
+    <FORM name="formulario" action="#" method="post" onSubmit="return validarfor();">
+        <p>Destinatario:</p>     
+        <SELECT NAME="lista">
+        <OPTION SELECTED>Sr
+        <OPTION>Sra.
+        </SELECT>
+        <br>
+    
+        <label for="nombres"><p>*Apellido y nombre: </p></label><br>
+        <INPUT TYPE="text"  id="nombres" name="nombres">
+        <br>
+    
+        <label for="razonsocial"><p>*Razon Social:</p></label>
+        <INPUT class="razon" TYPE="text"  id="razonsocial" name="razonsocial">
+        <br>
+    
+        <label for="mail"><p>*Email:</p></label>
+        <INPUT TYPE="email" id="mail">
+        <br>
+    
+        <label for="telefono"><p>*Telefono:</p></label>
+        <INPUT TYPE="tel"  id="telefono" name="telefono">
+        <br>
+    
+        <label for="celular"><p>*Celular:</p></label>
+        <INPUT TYPE="tel"  id="celular" name="celular">
+        <br>
+    
+        <p>Via de contacto:</p>
+        <SELECT NAME="viadecontacto" >
+        <OPTION SELECTED>Email
+        <OPTION>Telefono
+        <OPTION>Celular
+        </SELECT>
+        <br>
+    
+        <label for="comentarios"><p>*Comentarios:</p></label>
+        <textarea  id="comentarios" rows="5" cols="20" maxlength="300" name="comentarios" placeholder="Escribe aquí"></textarea>
+        <br>
+    
+        <input type="submit" name="commit" value="Enviar">
+    </form>
+
+    <script>
+
+function validarfor(){
+
+var correo = document.getElementById("mail").value; 
+var nom = document.getElementsByName("nombres")[0].value;
+var rs = document.getElementsByName("razonsocial")[0].value;
+var tel = document.getElementsByName("telefono")[0].value;
+var cel = document.getElementsByName("celular")[0].value;
+var coment = document.getElementsByName("comentarios")[0].value;
+
+var expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+
+if ( !expr.test(correo) ){                                                            //COMPRUEBA MAIL
+    alert("Error: La dirección de correo " + correo + " es incorrecta.");
+    return false;
+}
+
+if ((correo == "") || (nom == "") || (rs == "") || (tel == "") || (cel == "") || (coment == "")) {  //COMPRUEBA CAMPOS VACIOS
+    alert("Los campos no pueden quedar vacios");
+    return true;
+}
+
+}
+    </script>
+</body>
+</html>

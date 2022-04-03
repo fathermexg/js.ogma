@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funciones</title>
+</head>
+<body>
+    <script>
+        function saludo(nombre){
+            document.write("hola, buen día "+ nombre);
+        }
+        saludo("German");
+
+
+        function suma(num1,num2){
+            var num1 = num1;
+            var num2 = num2;
+            return num1 + num2;
+        }
+        document.write ("<br>");
+        document.write(suma(10,20));
+        document.write ("<br>");
+        document.write(suma(20,50));
+
+        function nummayor(valor1, valor2){
+            if (valor1 > valor2){
+                return valor1;
+            } else {
+                return(valor2);
+
+            }
+        }
+        nummayor(10,20);
+    </script>
+</body>
+</html>

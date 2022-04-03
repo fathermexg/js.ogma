@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM_modification</title>
+</head>
+<body>
+    <ol id ="lista">
+
+        <li>Loren ipsum dolor sit amet  </li>
+        <li>Asperiores ad,quam unde. fuga.</li>
+    </ol>
+
+<script>
+    var elemento = document.createElement("li"),
+        contenido = document.createTextNode("new text");
+    elemento.appendchild(contenido);
+    var padre = document.getElementsByTagName("li")[0].parentNode,
+        primerElemento = document.getElementsByTagName("li")[1];
+    padre.insertBefore(elemento,primerElemento);
+ 
+
+</script>
+</body>
+</html>

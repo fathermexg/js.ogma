@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validando correo</title>
+</head>
+<body>
+    <div align="center">
+        <br></br>
+    <form>
+        <label for="correo">Correo</label>
+        <input type="text" id="correo"/>
+        <br/><br/>
+        <label for="contraseña">Contraseña</label>
+        <input type="text" id="contraseña"/>
+        <br/><br/>
+        <input type="button" class="btn btn success" value="validar correo" onclick="validarcorreo(document.getElementById('correo').value)"/>
+        <br/><br/>
+        <input type="submit" id="btn btn success" name="btn" value="Enviar"onclick="validad(document.getElementById('contraseña').value)"/>
+    </form>
+
+    </div>
+    
+    
+    
+    <script>
+function validarcorreo(correo){
+    var expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+    var esValido = expReg.test(correo);
+    if (esValido == true) {
+        alert ('correo valido');
+    } 
+    else {
+        alert ('error de correo');
+    }if (validarcorreo.lenght ==0 || /^\s+$/.test(validarcorreo)) {
+        alert ("campo vacio")
+    }
+
+}
+
+
+        
+
+
+
+
+
+        /*        if (email_ == dominio_) {
+            console.log(dominio_)
+        } else {
+            
+        }
+
+        if(dominio1 ==[0]) {
+            console.log(email_+dominio1[0])
+        }else if (dominio1 ==[1]){
+            console.log(email_+dominio1[1])
+        }else if (dominio1 == [2]){
+            console.log(email_+dominio1[2])
+        }
+
+        var dominio_ = (email_);
+*/
+
+
+
+
+    </script>
+</body>
+</html>

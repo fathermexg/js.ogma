@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=c, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    canvas{
+        background-color: green;
+        border: solid rgb(140, 0, 255) 10px;
+    }
+    
+</style>
+
+<script>
+ window.onload =function() {
+     canvas = document.getElementById("canvas");
+     if(canvas && canvas.getContext){
+         ctx = canvas.getContext("2d");
+         if (ctx){
+            ctx.LineWidth = 25;
+            
+            ctx.strokeStyle="purple";
+            ctx.lineCap="round";
+            ctx.beginPath();
+            ctx.moveTo(50,150);
+            ctx.lineTo(450,150);
+            ctx.stroke();
+
+            ctx.strokeStyle="orange";
+            ctx.lineCap="square";
+            ctx.beginPath();
+            ctx.moveTo(50,250);
+            ctx.lineTo(450,250);
+            ctx.stroke();
+
+            
+            
+            }else {
+            alert ("tu nav NO soporta canva");
+         }
+     }
+ }
+
+</script>
+
+<body>
+    <canvas id ="canvas" width="600px" height="400px">
+        tu nav no soporta la etiqueta canvas
+    </canvas>
+</body>
+</html>

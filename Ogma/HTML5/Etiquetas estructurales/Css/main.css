@@ -1,0 +1,93 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    background: floralwhite;
+}
+header footer,article,nav, hgroup{
+    display: block;
+}
+html {
+    background-color: bisque ;
+}
+body{
+    margin: 0 auto;
+    width:  960px;
+}
+header {
+    height:  90px;
+    background:  #cff;
+}
+section{
+    height: 480px;
+    background-color: rgb(12, 84, 133);
+}
+article{
+    width: 460px;
+    position: relative;
+    float: left;
+}
+aside{
+    width: 360;
+    float: right;
+}
+footer{
+    width: 60px;
+    float: left;
+    background: #305;
+}
+nav{
+    font-size: 0.7em;
+    color: #cff;
+    text-align: center;
+    padding-top: 1em;
+}
+hgroup{
+    text-align: center;
+    color: beige;
+}
+h1 {
+    margin: 5px;
+    text-align: center;
+    color: #33f;
+}
+h2 {
+    margin: 5px;
+    text-align: center;
+    color: #09f;
+}
+h3{
+    clear: both;
+    text-align: center;
+    color: azure;
+    font-size: 0.8em;
+    padding-top: 1em;
+}
+p{
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 1em;
+} 
+img{
+    margin-bottom: 1em;
+}
+ul,li{
+    display: inline;
+}
+a{
+    text-decoration: none;
+    text-align: center;
+    color: aquamarine;
+}
+-clases/    
+.der{
+    float: right;
+    margin-left: 1em;
+}
+.izq{
+    float: left;
+    margin-right: 1em;
+}

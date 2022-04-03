@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario validado</title>
+</head>
+<body>
+<form action="" method="post" name="formulario">
+ <ul>
+  <li>
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="user_name" placeholder="Nombre">
+  </li>
+  
+  <li>
+    <label for="mail">Correo electrónico:</label>
+    <input type="email" id="mail" name="user_mail">
+  </li>
+  
+  <li>
+    <label for="msg">Mensaje:</label>
+    <textarea id="msg" name="user_message"></textarea>
+  </li>
+  
+  <li>
+    <input type="checkbox" id="terminos" name="terminos"> terminos y condiciones
+  </li>
+  
+  <li>
+    <input type="Radio" id="hombre" name="sexo">Hombre
+  </li>  
+  
+  <li>
+    <input type="radio" id="mujer" name="sexo">Mujer
+  </li>
+
+  <li>
+  <input type="submit" id="btn" name="btn" value="Enviar">
+</li>
+</ul>
+</form>
+
+<script>
+  (function(){
+    var formulario = document.getElementsByName("formulario")[0],
+      elementos = formulario.elements,
+      boton = document.getElementById("btn");
+    
+    var  validarNombre = function(e){
+      if (formulario.nombre.value == 0){
+        alert("completa el campo Nombre");
+        e.preventDefault();
+      }
+    };
+
+    var validarRadio = function(e){
+      if (formulario.sexo[0].checked == true || formulario.sexo[1].checked == true){
+
+      }else{
+     alert ("completa el campo sexo");
+     e.preventDefault(); 
+    }
+    };
+    var validarCheckbox =function (e){
+      if (formulario.terminate.checked == false){
+        alert ("completa el campo los terminos");
+     e.preventDefault(); 
+      }
+    }  
+    
+    var validar = function(e){
+          validarNombre (e);
+          validarRadio (e);
+          validarCheckbox(e);
+
+    };
+    
+    formulario.addEventListener("submit",validar);
+
+  }())
+</script>
+</body>
+</html>
